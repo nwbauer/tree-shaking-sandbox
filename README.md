@@ -13,3 +13,7 @@ With this setup, `my-module` can be edited (and re-packed) so that the resulting
 1. `npm install`
 2. `npm run build`
 3. look at `build/app.js` and see what was actually included
+
+## Realated Articles
+
+* Webpack Tree Shaking [webpack.js.org](https://webpack.js.org/guides/tree-shaking/)
