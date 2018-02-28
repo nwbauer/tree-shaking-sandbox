@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MinifyPlugin = require('babel-minify-webpack-plugin');
@@ -11,11 +12,19 @@ module.exports = (env={}) => {
     new HtmlWebpackPlugin({
       template:'./src/index.html',
       filename:'./index.html',
+      chunks: ['runtime', 'app'],
+      chunksSortMode: 'manual',
     }),
     new MinifyPlugin({
       mangle:false,
     }, {
       sourceMap:true,
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'runtime',
+      // minChunks: Infinity means that no app modules will be included into this chunk
+      // so just the webpack 'runtime' code
+      minChunks: Infinity,
     }),
   ];
 
