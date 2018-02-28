@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --open",
     "build": "webpack --env.analyze=true"
   },
-  "author": "",
+  "author": "Nicolas Bauer <nicolaswilliam.bauer@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-minify-webpack-plugin": "^0.3.0",
