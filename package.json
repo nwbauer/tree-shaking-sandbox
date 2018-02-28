@@ -1,0 +1,24 @@
+{
+  "name": "tree-shaking-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack --env.analyze=true"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-minify-webpack-plugin": "^0.3.0",
+    "html-webpack-plugin": "^2.30.1",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "webpack": "^3.11.0",
+    "webpack-bundle-analyzer": "^2.11.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-sources": "^1.0.1"
+  },
+  "dependencies": {
+    "my-module": "file:dependencies/my-module/my-module-1.0.0.tgz"
+  }
+}
