@@ -12,7 +12,9 @@ module.exports = (env={}) => {
       template:'./src/index.html',
       filename:'./index.html',
     }),
-    new MinifyPlugin({}, {
+    new MinifyPlugin({
+      mangle:false,
+    }, {
       sourceMap:true,
     }),
   ];
